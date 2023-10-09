@@ -7,7 +7,7 @@ draft: false
 tags:
   - freeCodeCamp
   - seedling
-ogImage: ""
+ogImage: "rafaeldavis-og.jpg"
 description: Documentation of the Music Player App prototype for the new JavaScript Curriculum Certification
 ---
 
