@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Rafael Hernandez",
   desc: "My personal digital notes and blog about web development, programming, and more!",
   title: "R-Digital Notes",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "rafaeldavish-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 4,
 };

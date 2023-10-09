@@ -21,7 +21,7 @@ const prev = pageNum > 1 ? "" : "disabled";
 const next = pageNum < totalPages ? "" : "disabled";
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
+<Layout title={`Notes | ${SITE.title}`}>
   <Header activeNav="notes" />
   <Main pageTitle="Notes" pageDesc="All the notes I've posted.">
     <ul>
@@ -38,7 +38,7 @@ const next = pageNum < totalPages ? "" : "disabled";
       <nav class="pagination-wrapper" aria-label="Pagination">
         <LinkButton
           disabled={prev === "disabled"}
-          href={`/posts${pageNum - 1 !== 1 ? "/" + (pageNum - 1) : ""}`}
+          href={`/notes${pageNum - 1 !== 1 ? "/" + (pageNum - 1) : ""}`}
           className={`mr-4 select-none ${prev}`}
           ariaLabel="Previous"
         >
