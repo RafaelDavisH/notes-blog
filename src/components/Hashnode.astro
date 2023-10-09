@@ -1,0 +1,52 @@
+---
+import { SITE } from "@config";
+import PostDatetime from "./PostDatetime";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import { getHashnodePosts } from "@utils/getHashnodePosts.mjs";
+
+const articles = await getHashnodePosts();
+---
+
+<Layout title={`Post | ${SITE.title}`}>
+  <Header activeNav="posts" />
+  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+    <ul>
+      {
+        articles.map(
+          (post: {
+            title: string;
+            slug: string;
+            brief: string;
+            dateAdded: string;
+            dateUpdated: string;
+            readTime: string;
+          }) => (
+            <li class="my-6">
+              <a
+                href={`/posts/${post.slug}`}
+                class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+              >
+                {
+                  <h2 class="text-lg font-medium decoration-dashed hover:underline">
+                    {post.title}
+                  </h2>
+                }
+              </a>
+              <PostDatetime
+                datetime={post.dateAdded}
+                dateUpdated={post.dateUpdated}
+                readingTime={post.readTime}
+              />
+              <p>{post.brief}</p>
+            </li>
+          )
+        )
+      }
+    </ul>
+  </Main>
+
+  <Footer />
+</Layout>

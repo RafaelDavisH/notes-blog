@@ -1,0 +1,15 @@
+---
+import { SITE } from "@config";
+import Hashnode from "@components/Hashnode.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout
+  title={`Posts | ${SITE.title}`}
+  description="Blog post about web development, programming tools, and other topics."
+  >
+  <head>
+    <title>Blog</title>
+  </head>
+  <Hashnode />
+</Layout>

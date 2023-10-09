@@ -1,0 +1,42 @@
+---
+import HashnodePost from "@layouts/HashnodePost.astro";
+import { getHashnodePosts } from "@utils/getHashnodePosts.mjs";
+
+export async function getStaticPaths() {
+  const articles = await getHashnodePosts();
+  return articles.map((article: { slug: string }) => ({
+    params: { slug: article.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const response = await fetch("https://gql.hashnode.com/", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    query: `
+            query Publication {
+                publication(host: "posts.rafaeldavis.dev") {
+                post(slug: "${slug}") {
+                    title
+                    readTimeInMinutes
+                    updatedAt
+                    publishedAt
+                    content {
+                    html
+                    }
+                }
+                }
+            }
+            `,
+  }),
+});
+
+const json = await response.json();
+const { post } = json.data.publication;
+---
+
+{(<HashnodePost post={post} slug={slug} />)}
