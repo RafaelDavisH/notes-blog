@@ -18,6 +18,6 @@ One key accomplishment was developing an efficient workflow system that utilized
 As of May 2023, I'm excited to take the challenge of developing a new podcast for freeCodeCamp, exclusively in Spanish. Occasionally, I have helped in creating prototype projects for an updated certification within the core curriculum. This year for the JavaScript updated curriculum I worked on a Music Player app.
 
 - ✉️  You can contact me at [rafael@freeCodeCamp.org](mailto:rafael@freeCodeCamp.org)
-- 🚀  I'm currently working on Music Player Prototype
+- ✅ 🚀  I'm currently working on Music Player Prototype
 - 🧠  I'm learning React and experimenting with Astro
 - ⚡  Love to play drums 🥁 and planning to learn guitar 🎸
