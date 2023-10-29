@@ -29,7 +29,9 @@ export default defineConfig({
       ],
     ],
     shikiConfig: {
-      theme: "one-dark-pro",
+      syntaxHighlight: "shiki",
+      theme: "material-theme-darker",
+      langs: ["js", "html", "css", "astro"],
       wrap: true,
     },
   },

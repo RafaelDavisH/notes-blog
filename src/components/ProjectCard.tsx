@@ -35,11 +35,11 @@ export default function ProjectCard({
         {secHeading ? (
           <h2 {...headerProps}>{title}</h2>
         ) : (
-          <h3 {...headerProps}>{title}</h3>
-        )}
-      </a>
-      <ProjectDatetime datetime={pubDatetime} site={site} repo={repo} />
-      <span>tech stack: </span>
+              <h3 {...headerProps}>{title}</h3>
+            )}
+          </a>
+          <ProjectDatetime datetime={pubDatetime} site={site ?? ''} repo={repo ?? ''} />
+          <span>tech stack: </span>
       {tools.map(tool => (
         <span
           transition:name={tool.toLowerCase()}
