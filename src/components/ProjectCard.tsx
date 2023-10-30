@@ -29,17 +29,21 @@ export default function ProjectCard({
   return (
     <li className="my-6">
       <a
-        href={href}
+        href={href ?? "#"}
         className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
       >
         {secHeading ? (
           <h2 {...headerProps}>{title}</h2>
         ) : (
-              <h3 {...headerProps}>{title}</h3>
-            )}
-          </a>
-          <ProjectDatetime datetime={pubDatetime} site={site ?? ''} repo={repo ?? ''} />
-          <span>tech stack: </span>
+          <h3 {...headerProps}>{title}</h3>
+        )}
+      </a>
+      <ProjectDatetime
+        datetime={pubDatetime}
+        site={site ?? ""}
+        repo={repo ?? ""}
+      />
+      <span>tech stack: </span>
       {tools.map(tool => (
         <span
           transition:name={tool.toLowerCase()}
