@@ -31,7 +31,7 @@ export default defineConfig({
     shikiConfig: {
       syntaxHighlight: "shiki",
       theme: "material-theme-darker",
-      langs: ["js", "html", "css", "astro"],
+      langs: ["js", "html", "css", "astro", "md"],
       wrap: true,
     },
   },
