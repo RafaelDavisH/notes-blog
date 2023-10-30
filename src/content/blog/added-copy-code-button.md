@@ -11,13 +11,13 @@ ogImage: ""
 description: After figuring out how to styled the fetched posst from Hashnode, I needed to add syntax highlighting.
 ---
 
-After figuring out how to styled the fetched posts published on my Hashnode blog, I wanted to add the "copy code" button.
+After figuring out how to style the fetched posts on my Hashnode blog, I decided to add a “copy code” button.
 
-During my search on how to styled fetch markdown, I found, ["Adding a Copy Code Button in Astro Markdown Code Blocks"](https://timneubauer.dev/blog/copy-code-button-in-astro/), a post by Tim Neubauer.
+While searching for how to style fetched markdown, I found a post titled, ["Adding a Copy Code Button in Astro Markdown Code Blocks"](https://timneubauer.dev/blog/copy-code-button-in-astro/), by Tim Neubauer.
 
-Very quick, I was able to add the button and get it to work. There is nothing to import or install for this simple button. Tim starts by creating a layout for posts. I already have a layout component so, I just added the script and the styles to the `base.css` file.
+It didn’t take me long to add the button and get it working. There’s nothing to import or install for this simple button. Tim starts by creating a layout for posts. Since I already had a layout component, I just added the script to the layout component and styles to the `base.css` file.
 
-Here is how and where I added the script to the Layout.
+Here’s where I added the script to the Layout.
 
 ```js
 ...
@@ -66,9 +66,9 @@ Here is how and where I added the script to the Layout.
 </html>
 ```
 
-I added Astro's Template Directive `is:inline`, which according to Astro's doc is important because it, "will be rendered in the final output HTML exactly where is it authored".
+I used Astro’s Template Directive `is:inline`, which Astro’s doc says is important because it “will be rendered in the final output HTML exactly where it is authored".
 
-The last thing, was to add the CSS styles to the `base.css`.
+Lastly, I added the CSS styles to the `base.css`.
 
 ```css
 .copy-code {
@@ -87,4 +87,4 @@ The last thing, was to add the CSS styles to the `base.css`.
 }
 ```
 
-The only difference with my code from Tim's is that I added color for the button's font to match my theme colors. And that's it.
+The only difference between my code and Tim’s is that I changed the button’s font color to match my theme. And that's it.
