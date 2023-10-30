@@ -20,6 +20,7 @@
     --color-card-muted: 138, 51, 2;
     --color-border: 59, 70, 85;
   }
+
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
     display: none;
@@ -132,4 +133,25 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+}
+
+.prose
+  :where(pre code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #75f5d9 !important;
+}
+
+.copy-code {
+  position: absolute;
+  color: #75F5D9;
+  top: 0;
+  right: 0;
+  background-color: #3730a3;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+
+.copy-code:hover {
+  background-color: #312e81;
 }
